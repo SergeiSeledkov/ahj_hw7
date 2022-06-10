@@ -14,3 +14,6 @@ PATCH ?method=changeTicket&id=${id}
 
 Удаление тикета:
 DELETE ?method=deleteTicket&id=${id}
+
+Адрес сервера:
+https://ahj-hw7.herokuapp.com/
