@@ -5,6 +5,7 @@ const koaBody = require('koa-body');
 const cors = require('@koa/cors');
 const Controller = require('./Controller.js');
 const controller = new Controller();
+const port = process.env.PORT || 7070;
 
 app.use(koaBody({
 	urlencoded: true,
@@ -96,4 +97,4 @@ app.use(async ctx => {
 	}
 });
 
-const server = http.createServer(app.callback()).listen(7070);
+const server = http.createServer(app.callback()).listen(port);
