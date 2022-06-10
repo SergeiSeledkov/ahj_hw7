@@ -1,0 +1,32 @@
+{
+	"name": "ahj_hw7",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"prestart": "npm install",
+		"start": "forever server.js",
+		"watch": "forever -w server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/SergeiSeledkov/ahj_hw7.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/SergeiSeledkov/ahj_hw7/issues"
+	},
+	"homepage": "https://github.com/SergeiSeledkov/ahj_hw7#readme",
+	"engines": {
+		"node": "11.x"
+	},
+	"dependencies": {
+		"@koa/cors": "^3.3.0",
+		"forever": "^4.0.3",
+		"koa": "^2.13.4",
+		"koa-body": "^5.0.0",
+		"uuid": "^8.3.2"
+	}
+}
