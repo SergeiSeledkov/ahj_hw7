@@ -33,7 +33,7 @@ class Controller {
 		const id = uuid.v1();
 		const ticket = new Ticket(id, name, false, created);
 		const ticketFull = new TicketFull(id, name, description, false, created);
-		const lastIndex = null;
+		let lastIndex = null;
 
 		tickets[0].push(ticket.createTicketObj());
 		tickets[1].push(ticketFull.createTicketFullObj());
