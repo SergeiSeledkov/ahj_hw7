@@ -14,7 +14,7 @@ app.use(koaBody({
 app.use(cors());
 
 app.use(async ctx => {
-	const { method, id, name, description } = ctx.request.query;
+	const { method, id, name, description, status } = ctx.request.query;
 
 	switch (method) {
 		case 'allTickets':
@@ -56,7 +56,7 @@ app.use(async ctx => {
 			break;
 		case 'changeTicket':
 			if (ctx.request.method === 'PATCH') {
-				const changeTicket = controller.changeTicket(id, name, description);
+				const changeTicket = controller.changeTicket(id, name, description, status);
 
 				if (changeTicket) {
 					ctx.response.body = `Ticked ${id} Changed`;

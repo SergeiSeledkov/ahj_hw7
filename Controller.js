@@ -42,12 +42,14 @@ class Controller {
 		return tickets[0][lastIndex];
 	}
 
-	changeTicket(id, name, description) {
+	changeTicket(id, name, description, status) {
 		for (let i in tickets[1]) {
 			if (tickets[0][i].id === id) {
 				tickets[0][i].name = name;
+				tickets[0][i].status = status;
 				tickets[1][i].name = name;
 				tickets[1][i].description = description;
+				tickets[1][i].status = status;
 
 				return true;
 			}
