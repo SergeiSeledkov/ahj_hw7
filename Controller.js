@@ -58,7 +58,8 @@ class Controller {
 
 	deleteTicket(id) {
 		for (let i in tickets[1]) {
-			if (tickets[1][i].id === id) {
+			if (tickets[0][i].id === id) {
+				tickets[0].splice(i, 1);
 				tickets[1].splice(i, 1);
 
 				return true;
