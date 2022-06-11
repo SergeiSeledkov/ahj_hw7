@@ -33,11 +33,13 @@ class Controller {
 		const id = uuid.v1();
 		const ticket = new Ticket(id, name, false, created);
 		const ticketFull = new TicketFull(id, name, description, false, created);
+		const lastIndex = null;
 
 		tickets[0].push(ticket.createTicketObj());
 		tickets[1].push(ticketFull.createTicketFullObj());
+		lastIndex = tickets[0].length - 1;
 
-		return true;
+		return tickets[0][lastIndex];
 	}
 
 	changeTicket(id, name, description) {

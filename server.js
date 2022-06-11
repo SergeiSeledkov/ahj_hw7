@@ -46,8 +46,7 @@ app.use(async ctx => {
 			break;
 		case 'createTicket':
 			if (ctx.request.method === 'POST') {
-				controller.createTicket(name, description);
-				ctx.response.body = 'Ticket Created';
+				ctx.response.body = controller.createTicket(name, description);
 				ctx.response.status = 200;
 			} else {
 				ctx.response.body = 'Method Not Allowed (Allow: POST)';
