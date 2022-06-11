@@ -54,9 +54,14 @@ class Controller {
 					tickets[1][i].description = description;
 				}
 
-				if (status || status === false) {
-					tickets[0][i].status = Boolean(status);
-					tickets[1][i].status = Boolean(status);
+				if (status === 'open') {
+					tickets[0][i].status = 'open';
+					tickets[1][i].status = 'open';
+				}
+
+				if (status === 'close') {
+					tickets[0][i].status = 'close';
+					tickets[1][i].status = 'close';
 				}
 
 				return true;
