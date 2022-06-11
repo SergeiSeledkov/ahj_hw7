@@ -44,6 +44,7 @@ class Controller {
 
 	changeTicket(id, name, description, status) {
 		for (let i in tickets[1]) {
+			console.log(status);
 			if (tickets[0][i].id === id) {
 				if (name) {
 					tickets[0][i].name = name;
@@ -55,6 +56,7 @@ class Controller {
 				}
 
 				if (status || status === false) {
+					console.log(status);
 					tickets[0][i].status = status;
 					tickets[1][i].status = status;
 				}
