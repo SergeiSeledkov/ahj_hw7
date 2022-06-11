@@ -55,8 +55,8 @@ class Controller {
 				}
 
 				if (status || status === false) {
-					tickets[0][i].status = status;
-					tickets[1][i].status = status;
+					tickets[0][i].status = Boolean(status);
+					tickets[1][i].status = Boolean(status);
 				}
 
 				return true;
