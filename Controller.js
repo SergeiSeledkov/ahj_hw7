@@ -54,7 +54,7 @@ class Controller {
 					tickets[1][i].description = description;
 				}
 
-				if (status) {
+				if (status || status === false) {
 					tickets[0][i].status = status;
 					tickets[1][i].status = status;
 				}
