@@ -8,10 +8,29 @@ class Controller {
 
 	getTime() {
 		const date = new Date();
-		const dateString = `${date.getDate()}.${date.getMonth()}.${date.getFullYear()}`;
-		const timeString = `${date.getHours()}:${date.getMinutes()}`;
+		const year = date.getFullYear();
+		let day = date.getDate();
+		let month = date.getMonth();
+		let hour = date.getHours();
+		let minute = date.getMinutes();
 
-		return `${dateString} ${timeString}`;
+		if (day < 10) {
+			day = `0${day}`;
+		}
+
+		if (month < 10) {
+			month = `0${month}`;
+		}
+
+		if (hour < 10) {
+			hour = `0${hour}`;
+		}
+
+		if (minute < 10) {
+			minute = `0${minute}`;
+		}
+
+		return `${day}.${month}.${year} ${hour}:${minute}`;
 	}
 
 	getAllTickets() {
